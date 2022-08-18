@@ -1,0 +1,19 @@
+micronaut:
+  application:
+    name: metrics-not-record-exception
+  metrics:
+    enabled: true
+    export:
+      prometheus:
+        enabled: true
+        step: PT1M
+
+endpoints:
+  prometheus:
+    enabled: true
+    sensitive: false
+
+netty:
+  default:
+    allocator:
+      max-order: 3
